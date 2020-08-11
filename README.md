@@ -14,7 +14,7 @@
 execute the following commands to get cookies
 
 ##Make sure to run it on console one by one not directly
-
+``` python
 from helium import *
 import pickle
 
@@ -32,4 +32,4 @@ pickle.dump(cookies,open('cookies.pkl','wb'))
 
 *after completing kill the browser by this command or simply by close*
 kill_browser()
-
+```
