@@ -39,7 +39,7 @@ kill_browser()
 
 <img alt = 'Zoom image' src ='https://github.com/deepusingla0448/ZoomAutomation/blob/master/images/Zoom.png' width = 700px height = 400px>
 
-# and then run it.
+# And then run it.
 
 <h1> Hope you like the Script :heart: :heart:</h1>
 
