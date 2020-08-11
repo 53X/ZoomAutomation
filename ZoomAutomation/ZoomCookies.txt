@@ -1,15 +1,15 @@
-
-@@@Before the running the commands import the above packages@@@
+@@Run all these one by one only in python console@@
 
 from helium import *
 import pickle
 
-#Open the zoom app
+##Open the zoom app
 driver = start_chrome('https://zoom.us')
 
 #first login into your zoom account
-
+#because we can't automate recaptcha we have to do manual login to get cookies which we can use again and without login in.
 #now after login
+
 #use this command to get cookies
 cookies = driver.get_cookies()
 

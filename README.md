@@ -33,3 +33,14 @@ pickle.dump(cookies,open('cookies.pkl','wb'))
 # after completing kill the browser by this command or simply by close
 kill_browser()
 ```
+
+#<h1> Now our main work starts </h1>
+##open the ZoomAutomation.py file and put meeting id ,passcode,cookies.pkl,your name in zoomAutomation object
+
+<img alt = 'Zoom image' src ='/images/zoom.png' width = 700px ,height = 400px>
+#and then run it
+
+<h1> Hope you like the Script :heart: :heart:</h1>
+
+
+

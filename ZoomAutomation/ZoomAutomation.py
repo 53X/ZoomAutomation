@@ -13,10 +13,11 @@ class ZoomAutomation:
         self.name = name
         self.proxy_id = proxy_id
         self.proxy_port = proxy_port
-        self.bahna = ['Sorry i have no camera for video play',
-                      'apna km kr',
-                      'hatttt',
-                      'oh yeahhhh ']  # list of bahna
+        self.excuses = ['Sorry i have no camera for video play',
+                        'I had technical difficulties',
+                        'Battery died',
+                        'Laggy and slow Internet connection ',
+                        'Poor internet connection']  # we can extends it as much we want
 
     def login(self):
         options = ChromeOptions()
@@ -58,14 +59,14 @@ class ZoomAutomation:
         pickle.dump(updatecookies, open('cookies.pkl', 'wb'))
         return driver
 
-    def Start_My_Video(self, driver):
-        if Text('Later').exists(): #waitng for Start my video to appear
-            click('Later') # if appear click on later
+    def main(self, driver):
+        if Text('Later').exists():  # waitng for Start my video to appear
+            click('Later')  # if appear click on later
             print('Later is clicked ')
-            self.chat(driver) #calling chat function to drop the message
-        elif Text('Stay muted').exists():#waitng for unmute  to appear
-            click('Stay muted') # if appear click on later
-            print('Muted is clicked')#calling chat function to drop the message
+            self.chat(driver)  # calling chat function to drop the message
+        elif Text('Stay muted').exists():  # waitng for unmute  to appear
+            click('Stay muted')  # if appear click on later
+            print('Muted is clicked')  # calling chat function to drop the message
             self.chat(driver)
         else:
             print('we got nothing')
@@ -77,7 +78,7 @@ class ZoomAutomation:
         else:
             self.LCHat(driver)
 
-    def LCHat(self, driver):
+    def LCHat(self, driver):  # If our Window Screen is large
         if not Text('open the chat pane').exists():
             footer = driver.find_element_by_class_name('footer__btns-container')
             hover(footer)
@@ -85,7 +86,7 @@ class ZoomAutomation:
             click('open the chat pane')
         textARE = driver.find_element_by_class_name('chat-box__chat-textarea')
         click(textARE)
-        text = random.choice(self.bahna)
+        text = random.choice(self.excuses)
         write(text)
         press(ENTER)
 
@@ -101,14 +102,14 @@ class ZoomAutomation:
                 '//*[(@id = "chat-window")]//*[contains(concat( " ", @class, " " ), concat( " ", "ax-outline-blue", " " ))]')
             click(cross)
 
-    def SChat(self, driver):
+    def SChat(self, driver):  # If our Window Screen is small
         print('small screen working')
         More = driver.find_element_by_id('moreButton')
         click(More)
         click('Chat')
         textARE = driver.find_element_by_class_name('chat-box__chat-textarea')
         click(textARE)
-        text = random.choice(self.bahna)
+        text = random.choice(self.excuses)
         write(text)
         press(ENTER)
         cross = driver.find_element_by_xpath(
@@ -117,12 +118,12 @@ class ZoomAutomation:
 
 
 if __name__ == '__main__':
-    zoom = ZoomAutomation('Meeting id', 'passcode', 'cookies.pkl','Your Name')
-    driver = zoom.login()
-    End_Time = time.time() + 50 * 60
+    zoom = ZoomAutomation('Meeting id', 'Passcode', 'cookies.pkl', 'Your Name')  # creating object of our class
+    driver = zoom.login()  # Calling login function to perform login
+    End_Time = time.time() + 50 * 60  # because normal meeting is of 50 min we set it 50 min. but you can change according to your requirement
     while time.time() < End_Time:
         try:
-            zoom.Start_My_Video(driver)
+            zoom.main(driver)
         except Exception as e:
             print(e)
             pass
