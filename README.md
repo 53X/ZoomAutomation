@@ -18,18 +18,18 @@ execute the following commands to get cookies
 from helium import *
 import pickle
 
-*Open the zoom app*
+# Open the zoom app
 driver = start_chrome('https://zoom.us
 
-*first login into your zoom account*
+# first login into your zoom account*
 
-*now after login*
-*use this command to get cookies*
+# now after login
+# use this command to get cookies
 cookies = driver.get_cookies()
 
-*load cookies in pickle file to use it*
+# load cookies in pickle file to use it
 pickle.dump(cookies,open('cookies.pkl','wb'))
 
-*after completing kill the browser by this command or simply by close*
+# after completing kill the browser by this command or simply by close
 kill_browser()
 ```
