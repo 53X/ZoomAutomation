@@ -10,10 +10,8 @@
 	[*] pip install helium
 	[*] pip install selenium
 
-##Then we will get cookies to bypass the authentication of zoom app
-execute the following commands to get cookies
+#### Then we will get cookies to bypass the authentication of zoom app execute the following commands to get cookies Make sure to run it on console one by one not directly
 
-##Make sure to run it on console one by one not directly
 ``` python
 from helium import *
 import pickle
@@ -35,11 +33,12 @@ kill_browser()
 ```
 <br>
 <h1> Now our main work starts </h1>
-##Open the ZoomAutomation.py file and put Meeting id , Passcode, cookies.pkl, Your name in ZoomAutomation object.
+
+##### Open the ZoomAutomation.py file and put Meeting id , Passcode, cookies.pkl, Your Name in ZoomAutomation object.
 
 <img alt = 'Zoom image' src ='https://github.com/deepusingla0448/ZoomAutomation/blob/master/images/Zoom.png' width = 700px height = 400px>
 
-##And then run it.
+##### And then run it.
 
 <h1> Hope you like the Script :heart: :heart:</h1>
 
