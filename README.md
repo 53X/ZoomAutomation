@@ -34,8 +34,8 @@ kill_browser()
 <br>
 <h1> Now our main work starts </h1>
 
-##### Run the ZoomRun.py file and put Meeting id , Passcode. 
-###### (Your Name Don't Run in Terminal use pycharm or spyder)
+##### Run the ZoomRun.py file and put Meeting id , Passcode, Your Name. 
+###### (Don't Run in Terminal use pycharm or spyder)
 
 <img alt = 'Zoom image' src ='https://github.com/deepusingla0448/ZoomAutomation/blob/master/ZoomAutomation/images/1.png' width = 700px height = 400px>
 
