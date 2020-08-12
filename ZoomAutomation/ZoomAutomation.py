@@ -6,11 +6,11 @@ import random
 
 
 class ZoomAutomation:
-    def __init__(self, MeetingID, password, cookies, name, proxy_id=None, proxy_port=None):
-        self.id = MeetingID
-        self.password = password
-        self.cookies = cookies
-        self.name = name
+    def __init__(self, proxy_id=None, proxy_port=None):
+        self.id = input('Enter Meeting ID : ')
+        self.password = input('Enter the Passcode : ')
+        self.cookies = 'cookies.pkl'
+        self.name = input('Enter your name : ')
         self.proxy_id = proxy_id
         self.proxy_port = proxy_port
         self.excuses = ['Sorry i have no camera for video play',
@@ -118,7 +118,7 @@ class ZoomAutomation:
 
 
 if __name__ == '__main__':
-    zoom = ZoomAutomation('Meeting id', 'Passcode', 'cookies.pkl', 'Your Name')  # creating object of our class
+    zoom = ZoomAutomation()  # creating object of our class
     driver = zoom.login()  # Calling login function to perform login
     End_Time = time.time() + 50 * 60  # because normal meeting is of 50 min we set it 50 min. but you can change according to your requirement
     while time.time() < End_Time:

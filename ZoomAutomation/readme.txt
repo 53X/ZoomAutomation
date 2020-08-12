@@ -10,7 +10,7 @@ from helium import *
 import pickle
 
 ##Open the zoom app
-driver = start_chrome('https://zoom.us')
+driver = start_chrome('https://zoom.us/signin')
 
 #first login into your zoom account
 #because we can't automate recaptcha we have to do manual login to get cookies which we can use again and without login in.

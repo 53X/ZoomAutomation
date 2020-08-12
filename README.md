@@ -34,11 +34,10 @@ kill_browser()
 <br>
 <h1> Now our main work starts </h1>
 
-##### Open the ZoomAutomation.py file and put Meeting id , Passcode, cookies.pkl, Your Name in ZoomAutomation object.
+##### Run the ZoomRun.py file and put Meeting id , Passcode,  Your Name .
 
-<img alt = 'Zoom image' src ='https://github.com/deepusingla0448/ZoomAutomation/blob/master/images/Zoom.png' width = 700px height = 400px>
+<img alt = 'Zoom image' src ='https://github.com/deepusingla0448/ZoomAutomation/blob/master/images/1.png' width = 700px height = 400px>
 
-##### And then run it.
 
 <h1> Hope you like the Script :heart: :heart:</h1>
 
