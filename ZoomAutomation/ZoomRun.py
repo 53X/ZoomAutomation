@@ -1,6 +1,7 @@
 from helium import *
 import time
-from ZoomAutomation import ZoomAutomation
+from ZoomAutomation.ZoomAutomation.ZoomAutomation import ZoomAutomation
+
 zoom = ZoomAutomation()
 driver = zoom.login()
 End_Time = time.time() + 50 * 60
